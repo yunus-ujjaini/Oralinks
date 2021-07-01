@@ -1,0 +1,44 @@
+
+.container{
+    margin-top: 100px;
+    margin-left: 20px;
+    width: 80vw;
+    display: flex;
+    justify-content: space-between;
+    
+}
+.quote{
+    
+    width: 25vw;
+    text-align: justify;
+    color:var(--background-buttons);
+    font-weight: 700;
+    
+}
+#quote1{
+    font-size: 1.1rem !important;
+}
+.author{
+    text-align: right;
+}
+
+.app{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+    margin: 5px;
+    width: auto;
+    background-color: var(--primary-color);
+    border: 1px solid var(--background-buttons);
+    color: var(--background-buttons);
+}
+.app:hover{
+    background-color: var(--background-buttons);
+    border: 1px solid var(--background-buttons);
+    color: var(--primary-color);
+    cursor: pointer;
+}
+.apps{
+    display: flex;
+}

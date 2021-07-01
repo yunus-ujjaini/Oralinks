@@ -1,0 +1,29 @@
+@import 'colors';
+@import 'envDetails';
+@import 'impLinks';
+@import 'quote';
+@import 'QR';
+@import 'oralinks';
+:root{
+    --primary-color:#CCB3B3;
+    --base-color:#E3D3E4;
+    --background-buttons:#3E3C3C;
+    --customfont:monospace,monospace;
+}
+*{
+    margin: 0;
+    transition: all;
+    transition-duration: 0.5s;
+    font-family:var(--customfont);
+    font-size: 0.9rem;
+    -ms-overflow-style: none;  /* IE and Edge */
+    scrollbar-width: none;  /* Firefox */
+
+}
+*::-webkit-scrollbar {
+    display: none;
+}
+body{
+    background-color: var(--base-color);
+}
+

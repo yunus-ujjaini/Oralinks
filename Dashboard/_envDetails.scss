@@ -1,0 +1,223 @@
+.customAlert{
+    position: fixed;
+    background-color: var(--background-buttons);
+    width:30vw;
+    top:5%;
+    left: 50%;
+    transform: translate( -50%);
+    box-shadow: 0px 0px 2px 1px var(--primary-color);
+    padding: 10px;
+    flex-direction: column;
+    z-index: 999;
+}
+.alertMessage{
+    border:none;
+    margin-top: 30px;
+    margin-bottom: 20px;
+    background-color: var(--background-buttons);
+    color: var(--primary-color);
+    text-align: center;
+}
+.envDetailsParent{
+    padding: 5px;
+    display:flex;
+}
+.envDetails{
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    width: 80vw;
+}
+.goToEnv{
+    display: flex;
+    justify-content: flex-end;
+    width: 20vw;
+}
+.addNewEnv{
+    margin-left: 2px;
+    border-radius: 50%;
+    border:none;
+    height: 25px;
+    width: 25px;
+    color:var(--primary-color);
+    background-color: var(--background-buttons);
+    
+}
+.addNewEnv:hover{
+    border-radius: 0%;
+    transition: all;
+    transition-duration: 0.5s;
+    cursor: pointer;
+    font-weight: 900;
+}
+.go{
+    position: relative;
+    border: none;
+    color:var(--primary-color);
+    background-color: var(--background-buttons);
+}
+.go:hover .golinks{
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    margin: 1px;
+    padding: 5px;
+    top:100%;
+    right:0%;
+    background-color:var(--background-buttons);
+    color:var(--primary-color);
+    
+}
+.golinks:hover{
+    cursor: pointer;
+}
+.urlno{
+    padding-left: 15px;
+    background-color: var(--background-buttons);
+    color:var(--primary-color);
+    outline: none;
+    border:none;
+}
+.urlno::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
+    color: var(--primary-color);
+    opacity: 1; /* Firefox */
+}
+
+.getEnvDetails{
+    position: fixed;
+    background-color: var(--background-buttons);
+    width:30vw;
+    top:5%;
+    left: 50%;
+    transform: translate( -50%);
+    box-shadow: 0px 0px 2px 1px var(--primary-color);
+    padding: 10px;
+    flex-direction: column;
+    z-index: 10;
+}
+#copyEnvText{
+    transform: translateX(-100%);
+}
+
+.envCopyButton{
+    background: transparent;
+    color:var(--primary-color);
+    border: none;
+}
+.envCopyButton:hover{
+    cursor: copy;
+}
+.envD{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.mainDetails{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.inputForm{
+    border:none;
+    border-bottom: 1px solid var(--primary-color);
+    outline: none;
+    margin-bottom: 20px;
+    background-color: var(--background-buttons);
+    color: var(--primary-color);
+    text-align: center;
+    
+}
+.inputForm::placeholder{
+    text-align: center;
+    color: var(--primary-color);
+}
+.buttons{
+    display: flex;
+    justify-content: center;
+}
+.modalbtn{
+    margin: 5px;
+    background-color: var(--background-buttons);
+    color:var(--primary-color);
+    border: 1px solid var(--primary-color);
+    padding: 5px;
+   
+}
+.modalbtn:hover{
+    cursor: pointer;
+    background-color: var(--primary-color);
+    color: var(--background-buttons);
+}
+.modalbtn2{
+    margin: 5px;
+    background-color: var(--background-buttons);
+    color:var(--primary-color);
+    border: 1px solid var(--primary-color);
+    padding: 5px;
+   
+}
+.modalbtn2:hover{
+    cursor: copy;
+}
+.close{
+    position: absolute;
+    right:10px;
+    top:10px;
+    background-color: var(--background-buttons);
+    color: var(--primary-color);
+    border: 1px solid var(--primary-color);
+    
+}
+.close:hover{
+    cursor: pointer;
+    background-color: var(--primary-color);
+    color: var(--background-buttons);
+}
+.hide{
+    display: none;
+}
+.show{
+    display: flex;
+}
+.name{
+    
+    background-color: var(--background-buttons);
+    border:1px solid var(--primary-color);
+    padding: 5px;
+    position: relative;
+    min-width: 50px;
+    
+    text-align: center;
+    color: var(--primary-color);
+    &:hover .links{
+        border:1px solid var(--primary-color);
+        background-color: var(--background-buttons);
+        color:var(--primary-color);
+        padding: 5px;
+        display: flex;
+        flex-direction: column;
+        position: absolute;
+        left: -1%;
+        top:100%;
+        z-index: 999;
+    }
+    .links{
+        display: none;
+        width: max-content;
+    }
+    .mainlink{
+        text-decoration: none;
+        color: var(--primary-color);
+        padding: 5px;
+    }
+    .links:hover{
+        cursor: pointer;
+    }
+}
+.golinks{
+    display: none;
+    a{
+        color:var(--primary-color);
+        text-decoration: none;
+    }
+}

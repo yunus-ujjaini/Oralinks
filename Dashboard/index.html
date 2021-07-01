@@ -1,0 +1,334 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>OraLinks</title>
+    <link rel="stylesheet" href="index.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel = "icon" href = 
+"logo.png" 
+        type = "image/x-icon">
+
+</head>
+<body>
+    <div class="customAlert" id="CustomAlert">
+        <button id="close" class="close" onclick="closeAlertModal()">X</button>
+        <div class="alertMessage" id="alertMessage">
+           
+        </div>
+    </div>
+    <div class="envDetailsParent">
+        
+        
+        <div class="envDetails" id="envDetails">
+        
+        </div>
+        <div class="goToEnv">
+            <input type="text" placeholder="URL No or Run id" id="urlno" class="urlno" onkeyup="updateGoLinks()">
+            <button id="go" class="go">GO
+                <div class="golinks">
+                    <a id="cdrm" target="_blank">CDRM</a>
+                    <a id="ovm" target="_blank">OVM</a>
+                    <a id="almvideo" target="_blank">Log</a>
+                    <!-- <a id="simpleLog" target="_blank">Simple Log</a> -->
+                </div>
+            </button>
+            <!-- <iframe id='myframe'></iframe> -->
+
+        </div><br/>
+        
+    </div>
+    <input type="text" id="copyEnvText" value="Copy from here">
+    <div class="getEnvDetails" id="getEnvDetails">
+        
+        <button id="close" class="close" onclick="closeModal()">X</button>
+        <div class="mainDetails" id="mainDetails">
+            <input type="text" placeholder="Env Name" id='envNameModal' class="inputForm">
+        </div>
+        <div class="buttons">
+            <button onclick='addNewDetail()' class="modalbtn">
+                Add new detail
+            </button>
+            <button onclick='addNewEnv()' class="modalbtn" id="submitNow">
+                Submit
+            </button>
+            <label id="selectedIndex" hidden></label>
+            <button onclick='updateEnv()' class="modalbtn" id="updateNow">
+                Update
+            </button>
+        </div>
+       
+    </div>
+
+
+    <div class="impLinks">
+        <input type="text" placeholder="Search..." id="searchLinks" onkeyup="search()"/>
+        <div class="links">
+            <div class="addedlinks" id="addedlinks">
+                
+            </div>
+            <button id="addNewLink" onclick="addNewLink()">
+                Add New Link
+            </button>
+            
+        </div>
+    </div>
+    <div class="getNewLink" id="getNewLink">
+        <button id="close" class="close" onclick="closeModalLink()">X</button><br/><br/>
+        <input class="inputForm" type="text" id="linkname" placeholder="linkname">
+        <input class="inputForm" type="text" id="link" placeholder="link">
+        <button class="modalbtn" onclick="addlink()">Add</button>
+    </div>
+
+
+
+    <div class="qr">
+        <div class="quadrant">
+            <div class="top">
+                <div id="impNotUrg" class="quad">
+                    <div class="titlequad">Imp but not Urgent</div>
+                    <div onclick='showimpNotUrg()' class="addTask">+</div>
+                    <div id="modeladdimpNotUrg" class="model">
+                        <button id="close" class="close" onclick="closeTaskModel()">X</button><br/><br/>
+                        <input type="text" class="inputForm" placeholder="Task" id="valueimpNotUrg">
+                        <button class="modalbtn" onclick="addimpNotUrg()">Add to Imp but not urgent</button>
+                    </div>
+                  
+                    <div class="tasks" id="taskImpNotUrg">
+                       
+                    </div>
+                </div>
+                <div id="impAndUrg" class="quad">
+                    <div class="titlequad">Imp and Urgent</div>
+                    <div onclick='showimpAndUrg()' class="addTask">+</div>
+                    <div id="modeladdimpAndUrg" class="model">
+                        <button id="close" class="close" onclick="closeTaskModel()">X</button><br/><br/>
+                        <input type="text" class="inputForm" placeholder="Task" id="valueimpAndUrg">
+                        <button class="modalbtn" onclick="addimpAndUrg()">Add to Imp and urgent</button>
+                    </div>
+                    <div class="tasks" id="taskImpAndUrg"></div>
+                </div>
+            </div>
+            
+            <div class="bottom">
+                <div id="notImpNotUrgnt" class="quad">
+                    <div class="titlequad">Not Imp not Urgent</div>
+                    <div onclick="shownotImpNotUrgnt()" class="addTask">+</div>
+                    <div id="modeladdnotImpNotUrgnt" class="model">
+                        <button id="close" class="close" onclick="closeTaskModel()">X</button><br/><br/>
+                        <input type="text" class="inputForm" placeholder="Task" id="valuenotImpNotUrgnt">
+                        <button class="modalbtn" onclick="addnotImpNotUrgnt()">Add to Not Imp not Urgent</button>
+                    </div>
+                    <div class="tasks" id="taskNotImpNotUrgnt"></div>
+                </div>
+                <div id="notImpButUrg" class="quad">
+                    <div class="titlequad">Not Imp but Urgent</div>
+                    <div onclick="shownotImpButUrg()" class="addTask">+</div>
+                    <div id="modeladdnotImpButUrg" class="model">
+                        <button id="close" class="close" onclick="closeTaskModel()">X</button><br/><br/>
+                        <input type="text" class="inputForm" placeholder="Task" id="valuenotImpButUrg">
+                        <button class="modalbtn" onclick="addnotImpButUrg()">Add to Not Imp but Urgent</button>
+                    </div>
+                    <div class="tasks" id="taskNotImpButUrg"></div>
+                </div>
+            </div>
+            
+        </div>
+        <div class="RS">
+            <div class="quote">
+                <center>
+                    <img src="30.svg" id="myLoader">
+                </center>
+                <div id="quote1">
+                   
+                </div>
+                
+                <br/>
+                <div class="author" id="author">
+                    
+                </div>
+            </div>
+            <div class="reminder">
+                <div class="title">Reminders</div>
+                <button id="addReminder" onclick="showReminderModel()">+</button>
+                <div class="reminders">
+                 
+                    <div class="allreminders" id="allreminders">
+                       
+                        
+                        
+                    </div>
+                
+                </div>
+            </div>
+            <div class="stickynotes">
+                <div class="title">Sticky</div>
+                <div id="stickynote" class="stickynote" contenteditable onkeyup="updateSticky()">
+                    Sticky Note
+                </div>
+            </div>
+           
+        </div>
+    </div>
+
+    <div id="container" class="container">
+        <div class="apps">
+            <!-- <div class="group">
+                <div class="app">
+                    Quick Dashboard
+                </div>
+                <div class="app">
+                    Get Y Drive Path
+                </div>
+                <div class="app">
+                    Quick Report
+                </div>
+            </div>
+            <div class="group">
+                <div class="app">
+                    Quick Dashboard
+                </div>
+                <div class="app">
+                    Get Y Drive Path
+                </div>
+                <div class="app">
+                    Quick Report
+                </div>
+            </div> -->
+            
+        </div>
+        
+        
+        
+    </div>
+
+    <div class="getNewReminder" id="getNewReminder">
+        <button id="close" class="close" onclick="closeModalReminder()">X</button><br/><br/>
+        <input class="inputForm" type="text" id="Reminder" placeholder="Reminder Name">
+        <input class="inputForm" type="text" id="ReminderDesc" placeholder="Reminder Description">
+        <input class="inputForm" type="datetime-local" id="ReminderDate" placeholder="Reminder Date">
+        <input type="number" class="inputForm" id="ReccurringTime" placeholder="Recurring time in minutes (optional)" value="0">
+        
+        <button class="modalbtn" onclick="addReminder()">Add</button>
+        
+    </div>
+
+
+
+    
+  
+    <div class="enable20" id="enable2020" onclick="enable20()">
+        Enable 20-20-20 Rule
+    </div>
+    
+
+
+
+
+
+    <div class="oralinks">
+        <div class="settings">
+            <div class="changeColor" onclick="openColorDialog()">
+                <i class="fa fa-paint-brush" ></i>
+            </div>
+            <div class="import" onclick="openUploadModel()">
+                <i class="fa fa-upload" ></i>
+            </div>
+        </div>
+        ORA | Links
+    </div>
+
+    <div class="chooseColors" id="chooseColors">
+        <button class="close" onclick="closeChooseColors()">X</button>
+        <b>Pick your Colors</b>
+        <div class="colorgrp">
+            <div class="colordiv">
+                <label>Base Color</label>
+                 <input class="colorinput" type="color" id="base-color" value="#ff0000">
+            </div>
+            
+            <div class="colordiv">
+                <label>Primary Color</label>
+                 <input class="colorinput" type="color" id="primary-color" value="#ff0000">
+            </div>
+    
+            <div class="colordiv">
+                <label>Secondary Color</label>
+                 <input class="colorinput" type="color" id="background-buttons" value="#ff0000">
+            </div>
+        </div>
+        <button class="modalbtn" onclick="modifyColors()">Apply</button>
+        <div class="fontAndTone">
+            <div class="font">
+                <b>Font:</b><br/><br/>
+                <center><input type="text" class="inputForm" id="selectFont" placeholder="Enter Font Name eg. Comic Sans MS"><br/>
+                <button class="modalbtn" onclick="modifyFont()">Apply</button></center>
+            </div>
+            <div >
+                <b>Tone:</b><br/><br/>
+                <center>
+                <div class="tones">
+                    <button class="toneButton tone" id="notification" onclick="changeSelectedTone('notification')">
+                        Default
+                    </button>
+                    <button  class="toneButton tone" id="Insight" onclick="changeSelectedTone('Insight')">
+                        Insight
+                    </button>
+                    <button class="toneButton tone" id="Target" onclick="changeSelectedTone('Target')">
+                        Target
+                    </button>
+                    <button class="toneButton tone" id="chirpy" onclick="changeSelectedTone('chirpy')">
+                        Chirpy
+                    </button>
+                    <button class="toneButton tone" id="reload" onclick="changeSelectedTone('reload')">
+                        Reload
+                    </button>
+                    <button class="toneButton tone" id="pristine" onclick="changeSelectedTone('pristine')">
+                        Pristine
+                    </button>
+                </div>
+                <br/>
+                <button class="modalbtn" onclick="modifyTone()">Apply</button></center>
+            </div>
+        </div>
+    </div>
+
+
+    <div class="uploadModel" id="uploadModel">
+        <button class="close" onclick="closeUploadModel()">X</button>
+        <br/>
+        <center><label>Select Env's that you wish to share</label></center><br/>
+        <div class="selectEnvs" id="selectEnvs">
+            <center><div class="selectAll" onclick="selectAllEnvs()">Select All</div></center>
+            <div class="allEnvs" id="allEnvs">
+
+            </div>
+        </div>
+        <br/>
+        <center><label>Select links that you wish to share</label></center><br/>
+        <div class="selectLinks" id="selectLinks">
+            <center><div class="selectAll" onclick="selectAllLinks()">Select All</div></center>
+            <div class="allLinks" id="allLinks">
+
+            </div>
+        </div>
+        <br/>
+        <button class="modalbtn2" onclick="CopyUploadCode()">Get Code</button><br/>
+        <input type="text" id="codeToCopy" style="transform: translate(-100vw);"><br/><br/>
+        <center><label>Paste Copied code below for Uploading new data</label></center><br/>
+        <textarea id='uploadText'></textarea>
+        <div class="controls">
+            <button class="modalbtn" onclick="overwriteData()">Upload data</button>
+        </div>
+        
+    </div>
+    <script src="settings.js"></script>
+    <script src="QR.js"></script>
+    <script src="quote.js"></script>
+    <script src="envDetails.js"></script>
+    <script src="impLinks.js"></script>
+    
+</body>
+</html>

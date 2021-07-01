@@ -1,0 +1,243 @@
+.qr{
+    display: flex;
+    width: 80vw;
+    justify-content: space-between;
+    margin-left: 20px;
+    margin-top: 20px;
+}
+.RS{
+    
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+}
+.reminder{
+   
+    text-align: center;
+    position: relative;
+    
+}
+.stickynotes{
+    position: relative;
+    overflow: visible;
+    resize: both;
+    height: 30vh;
+    width: 40vw;
+}
+.title{
+    
+    position: absolute;
+    top:-5%;
+    left: 50%;
+    transform: translate(-50%);
+    background-color: var(--background-buttons);
+    color: var(--primary-color);
+    padding: 4px;
+    z-index: 2;
+}
+
+.reminders{
+    position: relative;
+    width: 40vw;
+    height: 20vh;
+    border: 1px solid var(--background-buttons);
+    background-color: var(--primary-color);
+    overflow-y: scroll;
+    
+}
+#addReminder{
+    position: absolute;
+    right: -6px;
+    top:-6px;
+    background-color: var(--background-buttons);
+    color: var(--primary-color);
+    border: none;
+    border-radius: 50%;
+    height: 20px;
+    width: 20px;
+    z-index: 3;
+}
+#addReminder:hover{
+    font-weight: 900;
+    border-radius: 0px;
+}
+.stickynote{
+    background-color: var(--primary-color);
+    position: relative;
+    width: inherit;
+    height: inherit;
+    border: 1px solid var(--background-buttons);
+    outline:none;
+    padding: 20px;
+    box-sizing: border-box;
+    overflow: scroll;
+    color:var(--background-buttons);
+    resize: both;
+}
+.disable20{
+    position:fixed;
+    bottom:5px;
+    left:5px;
+    display: flex;
+    align-items: center;
+    color: var(--background-buttons);
+    padding: 5px;
+    border: 1px solid var(--background-buttons);
+}
+.disable20:hover{
+    cursor: pointer;
+    color: var(--primary-color);
+    background-color: var(--background-buttons);
+}
+.enable20{
+    position:fixed;
+    bottom:5px;
+    left:5px;
+    display: flex;
+    align-items: center;
+    padding: 5px;
+    color: var(--primary-color);
+    background-color: var(--background-buttons);
+    border: 1px solid var(--background-buttons);
+}
+.enable20:hover{
+    cursor: pointer;
+    color: var(--background-buttons);
+    background-color:var(--primary-color);
+}
+#status{
+    display: none;
+}
+
+.getNewReminder{
+    z-index: 10;
+    position: fixed;
+    background-color: var(--background-buttons);
+    width:30vw;
+    top:5%;
+    left: 50%;
+    transform: translate(-50%);
+    box-shadow: 0px 0px 2px 1px var(--primary-color);
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+}
+
+.remind{
+    margin: 2px;
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: 40%;
+    width: 30%;
+    background-color: var(--primary-color);
+    color:var(--background-buttons);
+    box-sizing: border-box;
+    transition-duration: 0.1s;
+}
+
+.remind:hover{
+    transition-duration: 0.1s;
+    cursor: pointer;
+    background-color: var(--background-buttons);
+    color:var(--primary-color);
+}
+.allreminders{
+    display: flex;
+    flex-wrap: wrap;
+    overflow: hidden;
+    padding:20px;
+}
+
+
+.quadrant{
+    margin-top: 20px;
+    display: flex;
+    flex-direction: column;
+}
+.top,.bottom{
+    display: flex;
+}
+.quad{
+    position: relative;
+    height: 35vh;
+    width: 35vh;
+    background-color: var(--primary-color);
+    border: 1px solid var(--background-buttons);
+    
+}
+.titlequad{
+    text-align: center;
+    position: absolute;
+    top:-5%;
+    left: 50%;
+    transform: translate(-50%);
+    background-color: var(--background-buttons);
+    color: var(--primary-color);
+    padding: 4px;
+    z-index: 2;
+    width: 60%;
+}
+.addTask{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    top:90%;
+    left: 90%;
+    background-color: var(--background-buttons);
+    color:var(--primary-color);
+    border-radius: 50%;
+    height: 20px;
+    width: 20px;
+}
+.addTask:hover{
+    border-radius: 0%;
+    cursor: pointer;
+}
+.model{
+    position: fixed;
+    background-color: var(--background-buttons);
+    width:20vw;
+    top:5%;
+    left: 50%;
+    transform: translate(-50%);
+    box-shadow: 0px 0px 2px 1px var(--primary-color);
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    z-index: 10;
+    
+}
+
+.tasks{
+    display: flex;
+    flex-direction: column;
+    padding: 5px;
+    margin-top: 20px;
+    height: 23vh;
+    width: auto;
+    overflow: scroll;
+    padding-bottom: 50px;
+    box-sizing: border-box;
+}
+.task{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 5px;
+    margin: 5px;
+    border: 1px solid var(--background-buttons);
+    color: var(--background-buttons);
+    background-color: var(--primary-color);
+}
+.task:hover{
+    cursor: pointer;
+    background-color: var(--background-buttons);
+    color: var(--primary-color);
+}
+#ReminderDate{
+    width: 100%;
+}
